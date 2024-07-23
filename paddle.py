@@ -1,7 +1,7 @@
 from turtle import Turtle
 
 
-class PaddleTwo(Turtle):
+class Paddle(Turtle):
     def __init__(self):
         super().__init__()
         self.penup()
@@ -10,7 +10,6 @@ class PaddleTwo(Turtle):
         self.shapesize(stretch_wid=1, stretch_len=5)
         self.speed('fastest')
         self.setheading(90)
-        self.goto(350, 0)
 
     def move_up(self):
         new_y_position = self.ycor() + 20

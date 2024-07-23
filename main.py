@@ -1,6 +1,5 @@
 import turtle as t
-from paddle_one import PaddleOne
-from paddle_two import PaddleTwo
+from paddle import Paddle
 
 screen = t.Screen()
 screen.bgcolor('black')
@@ -8,8 +7,11 @@ screen.setup(width=800, height=600)
 screen.title('Pong')
 screen.tracer(0)
 
-paddle_one = PaddleOne()
-paddle_two = PaddleTwo()
+paddle_one = Paddle()
+paddle_one.goto(350, 0)
+paddle_two = Paddle()
+paddle_two.goto(-350, 0)
+
 
 screen.listen()
 screen.onkey(fun=paddle_one.move_down, key='Down')
