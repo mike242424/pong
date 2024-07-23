@@ -32,4 +32,13 @@ while game_is_on:
     if ball.distance(paddle_one) < 50 and ball.xcor() > 320 or ball.distance(paddle_two) < 50 and ball.xcor() < -320:
         ball.bounce_x()
 
+    if ball.xcor() > 380:
+        print('point for player 2')
+        break
+
+    if ball.xcor() < -395:
+        print('point for player 1')
+        break
+
+
 screen.exitonclick()
