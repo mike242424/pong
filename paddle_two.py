@@ -1,10 +1,9 @@
-import turtle as t
+from turtle import Turtle
 
 
-class PaddleTwo(t.Turtle):
+class PaddleTwo(Turtle):
     def __init__(self):
         super().__init__()
-        self.hideturtle()
         self.penup()
         self.shape('square')
         self.color('white')
@@ -12,7 +11,6 @@ class PaddleTwo(t.Turtle):
         self.speed('fastest')
         self.setheading(90)
         self.goto(350, 0)
-        self.showturtle()
 
     def move_up(self):
         new_y_position = self.ycor() + 20
