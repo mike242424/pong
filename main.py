@@ -13,7 +13,6 @@ paddle_one = Paddle((350, 0))
 paddle_two = Paddle((-350, 0))
 ball = Ball()
 
-
 screen.listen()
 screen.onkey(fun=paddle_one.move_down, key='Down')
 screen.onkey(fun=paddle_one.move_up, key='Up')
@@ -21,6 +20,7 @@ screen.onkey(fun=paddle_two.move_down, key='s')
 screen.onkey(fun=paddle_two.move_up, key='w')
 
 game_is_on = True
+
 while game_is_on:
     time.sleep(0.1)
     screen.update()
@@ -33,12 +33,10 @@ while game_is_on:
         ball.bounce_x()
 
     if ball.xcor() > 380:
-        print('point for player 2')
-        break
+        ball.reset_position()
 
     if ball.xcor() < -395:
-        print('point for player 1')
-        break
+        ball.reset_position()
 
 
 screen.exitonclick()
