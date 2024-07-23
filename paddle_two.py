@@ -8,14 +8,16 @@ class PaddleTwo(t.Turtle):
         self.penup()
         self.shape('square')
         self.color('white')
-        self.shapesize(1, 5)
+        self.shapesize(stretch_wid=1, stretch_len=5)
         self.speed('fastest')
         self.setheading(90)
         self.goto(350, 0)
         self.showturtle()
 
     def move_up(self):
-        self.forward(20)
+        new_y_position = self.ycor() + 20
+        self.goto(self.xcor(), y=new_y_position)
 
     def move_down(self):
-        self.backward(20)
+        new_y_position = self.ycor() - 20
+        self.goto(x=self.xcor(), y=new_y_position)
