@@ -7,10 +7,8 @@ screen.setup(width=800, height=600)
 screen.title('Pong')
 screen.tracer(0)
 
-paddle_one = Paddle()
-paddle_one.goto(350, 0)
-paddle_two = Paddle()
-paddle_two.goto(-350, 0)
+paddle_one = Paddle((350, 0))
+paddle_two = Paddle((-350, 0))
 
 
 screen.listen()
